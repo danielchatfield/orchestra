@@ -8,9 +8,9 @@ import (
 
 	log "github.com/cihub/seelog"
 	"github.com/codegangsta/cli"
-	"github.com/mondough/orchestra/commands"
-	"github.com/mondough/orchestra/config"
-	"github.com/mondough/orchestra/services"
+	"github.com/danielchatfield/orchestra/commands"
+	"github.com/danielchatfield/orchestra/config"
+	"github.com/danielchatfield/orchestra/services"
 )
 
 var app *cli.App
@@ -34,6 +34,7 @@ func main() {
 		*commands.PsCommand,
 		*commands.TestCommand,
 		*commands.BuildCommand,
+		*commands.UpdateCommand,
 	}
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
